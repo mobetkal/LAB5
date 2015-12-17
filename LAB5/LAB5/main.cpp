@@ -2,6 +2,7 @@
 #include "geometry.h"
 #include "geometryfactory.h"
 #include "uniquegeometrylist.h"
+#include "geometryset.h"
 
 using namespace std;
 
@@ -24,6 +25,27 @@ void main()
 	cout << P3->toString() << endl;
 	string name = "plik.txt";
 	UniqueGeometryList lista(name);
+	cout << "------------------------------------------------------------\n";
+	GeometrySet test7(move(lista));
+	for (auto& elem : test7.zbior)
+		cout << elem->toString() << endl;
 
+	std::vector<std::weak_ptr<Geometry>> wektor;
+	for (auto& elem : test7.zbior)
+	{
+		wektor.push_back(elem);
+		
+	}
+	test7.zbior.erase(test7.zbior.begin());
+	for (auto aktywny : wektor)
+	{
+		if (shared_ptr<Geometry> s2 = aktywny.lock()) {
+			cout << s2->toString() << endl;
+		}
+		else {
+			cout << "Obiekt nie istnieje" << endl;
+		}
+	}
+	
 	system("PAUSE");
 }
