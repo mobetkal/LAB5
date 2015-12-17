@@ -1,6 +1,7 @@
 #include <iostream>
 #include "geometry.h"
 #include "geometryfactory.h"
+#include "uniquegeometrylist.h"
 
 using namespace std;
 
@@ -21,5 +22,8 @@ void main()
 	GeometryFactory test6;
 	auto P3 = test6.create("rectangle 3 10");
 	cout << P3->toString() << endl;
+	string name = "plik.txt";
+	UniqueGeometryList lista(name);
+
 	system("PAUSE");
 }

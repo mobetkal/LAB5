@@ -26,5 +26,11 @@
     <ClInclude Include="geometryfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="uniquegeometrylist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="geometryset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

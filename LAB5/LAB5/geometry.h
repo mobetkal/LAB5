@@ -10,7 +10,7 @@ public:
 	virtual float area() const = 0;
 	virtual std::string toString() const = 0;
 
-	~Geometry() {};
+	virtual ~Geometry() {};
 
 };
 
