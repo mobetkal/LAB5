@@ -11,7 +11,6 @@ public:
 	virtual std::string toString() const = 0;
 
 	~Geometry() {};
-	Geometry() {};
 
 };
 
